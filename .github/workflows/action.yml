@@ -11,6 +11,8 @@ on:
 jobs:
   auto_renew:
     runs-on: ubuntu-latest
+    environment: 
+      name: Auto_renew
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v2
