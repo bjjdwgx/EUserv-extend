@@ -4,8 +4,8 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-USERNAME = ["","ywsxdlr@foxmail.com"]
-PASSWORD = ["","BJJD2004bjjd"]
+USERNAME = os.environ["USERNAME"]
+PASSWORD = os.environ["PASSWORD"]
 PROXIES = {
     "http": "http://127.0.0.1:10809",
     "https": "http://127.0.0.1:10809"
@@ -114,6 +114,7 @@ if __name__ == "__main__":
         exit(1)
     user_list = USERNAME.split(',')
     passwd_list = PASSWORD.split(',')
+    print(user_list+passwd_list)
     if len(user_list) != len(passwd_list):
         print("The number of usernames and passwords do not match!")
         exit(1)
