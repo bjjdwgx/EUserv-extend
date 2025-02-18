@@ -114,7 +114,7 @@ if __name__ == "__main__":
         exit(1)
     user_list = USERNAME.split(',')
     passwd_list = PASSWORD.split(',')
-    print(user_list+passwd_list)
+    print(user_list+"|"+passwd_list)
     if len(user_list) != len(passwd_list):
         print("The number of usernames and passwords do not match!")
         exit(1)
